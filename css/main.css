@@ -1,0 +1,940 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: -0.5px;
+    -webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#wrapper {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    margin-top: 64px;
+	overflow: hidden;
+}
+
+
+/*
+    STICKY NAV
+*/
+
+#nav-bar {
+    background: #2F3745;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 64px;
+    text-align: left;
+}
+
+.anchor-padded {
+    position:relative;
+    height:80px;
+}
+
+#nav-bar-container {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+#nav-bar .left {
+	display: table-cell;
+	/* background: green; */
+	width: 420px;
+	padding-left: 20px;
+}
+
+#ticker-small-container {
+	display: table-cell;
+	/* background: blue; */
+	width: auto;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#nav-bar a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#nav-bar a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+#nav-bar .nav-button {
+    position: relative;
+    margin-top: 12px;
+    color: #ffffff;
+    font-size: 11px;
+    letter-spacing: 0px;
+    padding: 12px 7px 4px 44px;
+    height: 24px;
+    display: inline-block;
+    width: auto;
+}
+
+@media only screen and (max-width:870px) {
+	#nav-bar .left {
+		width: 134px;
+	
+		min-width: 125px;
+}
+
+	#nav-bar .nav-button {
+		padding-left: 32px;
+	}
+
+	.nav-text {
+		display: none;
+	}
+}
+
+#nav-bar .what-button {
+    background: url("../img/nav/what-is-bitcoin.png") 6px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+}
+
+#nav-bar .story-button {
+    background: url("../img/nav/story-of-bitcoin.png") 6px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+}
+
+#nav-bar .today-button {
+    background: url("../img/nav/bitcoin-today.png") 6px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+}
+
+#sharing {
+	position: relative;
+	width: 239px;
+	text-align: right;
+	height: 100%;
+	display: table-cell;
+	/* background: yellow; */
+	vertical-align: middle;
+	padding: 5px 10px 0px 0px;
+}
+
+#fb-like-container {
+	top: -5px;
+	left: -11px;
+	display: inline-block !important;
+	position: relative;
+}
+
+@media only screen and (max-width:600px) {
+	#sharing {
+		width: 10px;
+		padding: 5px 10px 0px 0px;
+	}
+
+	#fb-like-container {
+		top: -5px;
+		left: -20px;
+		display: inline-block !important;
+	}
+
+	#twitter-widget-0 {
+		margin-right: -6px;
+	}
+}
+
+
+/* SECTION NAV */
+
+#section-nav {
+    margin-top: 60px;
+}
+
+#section-nav .section-nav-box {
+    text-align: center;
+    position: relative;
+    width: 197px;
+    height: 197px;
+    display: inline-block;
+    margin: 0px 20px;
+    color: white;
+    font-size: 26px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#section-nav .section-nav-box .label {
+    bottom: 20px;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    line-height: 30px;
+    letter-spacing: 0px;
+}
+
+#section-nav .section-nav-box.what-button {
+    opacity: 0;
+    background: #1c4796 url("../img/section-nav/what-is-bitcoin.png") center 26px;
+    background-size: 77px;
+    background-repeat: no-repeat;
+}
+
+#section-nav .section-nav-box.story-button {
+    background: #1c4796 url("../img/section-nav/story-of-bitcoin.png") center 26px;
+    background-size: 88px;
+    background-repeat: no-repeat;
+}
+
+#section-nav .section-nav-box.today-button {
+    background: #1c4796 url("../img/section-nav/bitcoin-today.png") center 26px;
+    background-size: 47px;
+    background-repeat: no-repeat;
+}
+
+
+
+/* INTRO */
+
+#trade-corner {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 117px;
+    height: 117px;
+}
+
+#main-title {
+    font-size: 55px;
+    margin: auto auto auto auto;
+    max-width: 730px;
+    line-height: 66px;
+    padding-top: 67px;
+}
+
+.title {
+    color: #1c4796;
+    font-size: 35px;
+    position: relative;
+    padding: 0px 20px;
+    font-weight: normal;
+    margin: auto;
+}
+
+.title a {
+	text-decoration: underline;
+	color: inherit;
+}
+
+.title a:hover {
+	text-decoration: underline;
+	color: #F3AE00;
+}
+
+.sub-title {
+    color: #989897;
+    font-size: 18px;
+    position: relative;
+    padding: 0px 20px;
+    margin: auto;
+    font-weight: normal;
+}
+
+#scroll-down {
+    margin-top: 118px;
+	opacity: 0;
+	visibility: hidden;
+}
+
+#scroll-down-arrow {
+    width: 22.5px;
+    height: 11.5px;
+    margin-top: 15px;
+    margin-bottom: 170px;
+    position: relative;
+	opacity: 0;
+	visibility: hidden;
+}
+
+
+/* FLOW DIAGRAM */
+
+.button {
+	background: #FF00FF;
+	opacity: 0;
+}
+
+.flow-section-container {
+	width: 98%;
+	height: auto;
+	margin-top: 30px;
+	margin-bottom: 68px;
+	display: inline-block;
+	position: relative;
+	font-size: 100%;
+}
+
+.flow-section-image {
+	width: 100%;
+	height: auto;
+}
+
+.flow-label {
+	position: absolute;
+	text-align: left;
+	color: white;
+	font-size: 100%;
+	height: auto;
+
+	/* background: rgba(255, 255, 0, .5); */
+}
+
+
+/* PARALLAX */
+
+.clear {
+	clear: both;
+}
+
+.parallax-container {
+	width: 100%;
+	min-height: 100px;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.white-grad {
+	background: url('../img/parallax/white-grad.png') repeat center 0px;
+	width: 100%;
+	height: 65px;
+	margin-top: -65px;
+	position: relative;
+}
+
+.white-grad1 {
+	background: url('../img/parallax/white-grad1.png') repeat center 0px;
+	width: 100%;
+	height: 65px;
+	position: absolute;
+	top: 0px;
+}
+
+
+.parallax {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#b-parallax1, #b-parallax2, #b-parallax3 {
+	background: url('../img/parallax/b-parallax.png') repeat center 0px;
+	background-size: 228px;
+	opacity: .1;
+}
+
+
+/* WHAT IS BITCOIN? */
+
+
+#currency-container {
+    max-width: 796px;
+    max-height: 758px;
+}
+
+#it-is {
+	margin-bottom: 20px;
+}
+
+#use-container {
+	max-width: 806px;
+	max-height: 994px;
+}
+
+
+/* WHAT IS BUTTONS */
+
+#use-button1 {
+	position: absolute;
+	top: 5%;
+	left: 51%;
+	width: 16%;
+	height: 6%;
+}
+
+#use-button2 {
+    position: absolute;
+    top: 69%;
+    left: 1%;
+    width: 14%;
+    height: 12%;
+}
+
+#use-button3 {
+    position: absolute;
+    top: 69%;
+    left: 59%;
+    width: 14%;
+    height: 12%;
+}
+
+#use-button4 {
+    position: absolute;
+    top: 69%;
+    left: 79%;
+    width: 17%;
+    height: 12%;
+}
+
+/* END WHAT IS BUTTONS */
+
+
+
+#store {
+	margin-bottom: 20px;
+}
+
+#store-container {
+	max-width: 803px;
+	max-height: 478px;
+	margin-bottom: 70px;
+}
+
+#store-button1 {
+	position: absolute;
+	top: 35%;
+	left: 0%;
+	width: 19%;
+	height: 14%;
+}
+
+#spend1-container {
+	max-width: 756px;
+	max-height: 245px;
+	margin: auto;
+	display: block;
+	margin-top: 50px;
+	margin-bottom: 18px;
+	font-size: 100%;
+}
+
+#spend2-container {
+	max-width: 457px;
+	max-height: 311px;
+	margin-bottom: 4px;
+}
+
+#verification-container {
+	max-width: 761px;
+	max-height: 909px;
+	font-size: 100%;
+}
+
+
+/* Spend Buttons */
+
+#spend-button1 {
+    position: absolute;
+    top: -6%;
+    left: 35%;
+    width: 30%;
+    height: 111%;
+}
+
+#spend-button2 {
+    position: absolute;
+    top: -6%;
+    left: 67%;
+    width: 34%;
+    height: 111%;
+}
+
+/* End Spend Buttons */
+
+/*
+    GRAPHS
+*/
+
+#today {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.graph-holder, .graph-canvas {
+	position: relative;
+}
+
+.graph-canvas .spinner {
+	position: absolute;
+	left: 48%;
+	top: 50%;
+	width: 48px;
+	height: 48px;
+	margin-left: -24px;
+	margin-top: -24px;
+	opacity: .3;
+}
+
+.graph-holder.small-graph {
+	display: inline-block;
+}
+
+.graph-holder.small-graph .spinner {
+	left: 58%;
+	top: 47%;
+}
+
+.graph {
+    position: relative;
+    display: inline-block;
+	
+    margin: 20px 0px;
+    width: 100%;
+}
+
+.graph ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 20px;
+    margin: 0px;
+}
+
+.graph ul li {
+    display: inline-block;
+    margin-bottom: 4%;
+}
+
+.graph ul li a {
+    font-size: 15px;
+    padding: 6px 20px;
+    text-decoration: none;
+    color: #7492BF;
+    background: #D1DBEA;
+    line-spacing: 20px;
+}
+
+.graph ul li a:hover, .graph ul li a.selected {
+	color: white !important;
+	background: #184A94 !important;
+}
+
+#market-volumes {
+	max-width: 850px;
+	height: auto;
+	width: 90%;
+	margin: 0px;
+	padding: 0px 20px;
+}
+
+.market-volumes-key {
+    position:relative;
+    display:table;
+    margin: auto;
+    border-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+.market-volumes-key div {
+    position:relative;
+}
+
+.key-item {
+    display:table-row;
+}
+
+.key-item .circle {
+    display:table-cell;
+    width: 30px;
+    height: 30px;
+}
+
+.key-item .circle svg {
+    display: block;
+}
+
+.key-item p {
+    display:table-cell;
+    vertical-align: middle;
+    text-align: left;
+    padding: 0 0 0 10px;
+    font-size:14px;
+    line-height:14px;
+}
+
+/* TEXT */
+
+.px14 {
+	font-size: 14px;
+}
+
+.px22 {
+	font-size: 22px;
+}
+
+.black {
+	color: black;
+}
+
+
+
+
+/*
+    TICKER
+*/
+
+.ticker-container {
+	background: green;
+	max-width: 850px;
+	height: 100px;
+	position: relative;
+	margin: auto;
+	padding: 0px 20px;
+	display: table;
+}
+
+.ticker-cell {
+	display: table-cell;
+	width: 50%;
+	height: 100%;
+	background: black;
+}
+
+.ticker {
+    position:relative;
+    display:inline-block;
+    height: 80px;
+    margin: 15px 5% 80PX;
+}
+
+.ticker-title {
+    font-size: 16px;
+    position:absolute;
+    float:left;
+    width:30px;
+    color:#1C4796;
+
+    -webkit-transform: rotate(-90deg) translate(-45px,0);
+    -ms-transform:rotate(-90deg) translate(-45px,0);
+    transform:rotate(-90deg) translate(-45px,0);
+
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.ticker-value {
+    display:block;
+    width:auto;
+    text-align: left;
+}
+
+.ticker-data {
+    background-color:#2E3645;
+    position:relative;
+    margin-left:30px;
+    /*height:100%;*/
+    padding:15px 15px 15px 15px;
+    min-width:240px;
+    min-height:50px;
+}
+
+.ticker-number {
+    display:inline;
+    position:relative;
+    font-size:30px;
+    color:#F3AE00;
+    line-height: 30px;
+}
+
+.ticker-label {
+    text-align: left;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 16px;
+}
+
+.ticker-arrow {
+    display:inline;
+}
+
+.ticker-arrow img {
+    width:26px;
+    vertical-align: top;
+    margin:5px 0 0 5px;
+
+    -webkit-transition: -webkit-transform 0.3s ease-out; /* Changed here */
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+}
+
+.ticker-arrow img.down {
+    -webkit-transform: rotate(180deg) translate(0px,0);
+    -ms-transform:rotate(180deg) translate(0px,0);
+    transform:rotate(180deg) translate(0px,0);
+
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.ticker.small {
+    /* background-color: pink; */
+	color:#F3AE00;
+    position:relative;
+    height: auto;
+    width: auto;
+    margin: 0px;
+    min-width: 220px;
+}
+
+.ticker.small div {
+    display:inline-block;
+    position:relative;
+    vertical-align: top;
+}
+
+.ticker-small-title {
+    font-size:12px;
+    color: #FFFFFF;
+    line-height:13px;
+    margin-top:5px;
+}
+
+.ticker.small .ticker-number {
+    position:relative;
+    font-size: 34px;
+    letter-spacing: -3px;
+    line-height: 35px;
+    margin-right:3px;
+}
+
+.ticker-small .ticker-usd {
+    vertical-align: top;
+    font-size: 18px;
+    height:auto;
+    top:0;
+
+}
+
+.ticker.small .ticker-arrow img {
+    display:block;
+    width:16px;
+    margin-left:0px;
+}
+
+/* Bitcoin Story */
+
+.story-scroll {
+    position:relative;
+    left:50%;
+    width:680px;
+    height:auto;
+    margin: 0 0 70px -340px;
+    padding:0;
+    font-size:0;
+}
+
+.scroll-item:first-of-type {
+    background-image: url('../img/misc/story-grad-top.png');
+    background-position: center top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.scroll-item:last-of-type {
+    background-image: url('../img/misc/story-grad-bottom.png');
+    background-position: center bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.scroll-item {
+    width:662px;
+    height:90px;
+    font-size:0;
+    margin:42px auto 42px auto;
+
+}
+
+.scroll-item .inline {
+    display:inline-block;
+    position:relative;
+    vertical-align: middle;
+    height:100%;
+    padding:0;
+    margin:0;
+    font-size: 17px;
+    /*float:left;*/
+}
+
+.story-left {
+    width:283px;
+    background-image: url("../img/misc/story-arrow.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 9px;
+}
+
+.story-content {
+    width:274px;
+    background-color: #2E3645;
+    color: #fff;
+    opacity: 0.70;
+    height:100%;
+}
+
+.story-content p {
+    font-weight: 300;
+    margin:0;
+    text-align: left;
+}
+
+.story-date {
+    font-size: 17px;
+    padding: 8px 0 0 10px;
+ 
+    font-weight: 400 !important;
+}
+
+.story-body {
+    padding: 5px 11px 0 10px;
+    line-height: 20px;
+}
+
+.story-body a {
+	text-decoration: underline;
+	color: white;
+	font-weight: 400;
+}
+
+.story-body a:hover {
+	text-decoration: underline;
+	color: #F3AE00;
+}
+
+.story-center {
+    position: relative;
+    width:112px;
+    margin-left:-9px !important;
+}
+
+.story-right {
+    width:274px;
+    text-align: left;
+}
+
+.story-square {
+    position:relative;
+    background-color: #f3ae00;
+    width: 36px;
+    height: 36px;
+    left:50%;
+    top:50%;
+    margin:-18px 0 0 -18px;
+}
+
+.story-right p {
+    padding:0;
+    margin:0;
+}
+
+.story-right .story-value {
+    font-size:60px;
+    line-height: 60px;
+    color: #1c4796;
+}
+
+.story-right .story-usd {
+    font-size:30px;
+    color: #1c4796;
+    line-height: 30px;
+}
+
+.story-right .story-btc {
+    font-size:16px;
+    color: #b3b3b3;
+    line-height: 16px;
+}
+
+.story-right .inline {
+    display:table-cell;
+    position: relative;
+    vertical-align: middle;
+    height:86px; /* nudges it up a bit */
+}
+
+@media(max-width: 679px) {
+
+    .scroll-item {
+        margin:22px auto 22px auto;
+    }
+
+    .story-right {
+        top:18px;
+    }
+
+    .story-right .story-value {
+        font-size:45px;
+        line-height: 45px;
+    }
+
+    .story-right .story-usd {
+        font-size:25px;
+        line-height: 25px;
+    }
+
+    .story-right .story-btc {
+        font-size:14px;
+        line-height: 14px;
+    }
+
+    .story-right .inline {
+        height:90px; /* nudges it up a bit */
+    }
+}
+
+@media(min-width:680px) {
+
+    .story-scroll {
+        background-image: url('../img/misc/story-line.png');
+        background-position: center top;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+    }
+}
+
+
+/* FOOTER */
+
+#footer {
+	background: #121d2b;
+	width: 100%;
+	padding: 30px 0px;
+	color: white;
+	font-size: 15px;
+	line-height: 23px;
+}
+
+#footer .footer-logo {
+	padding: 45px 20px 20px;
+	width: 223px;
+	height: auto;
+}
+
+#footer a {
+	color: white;
+	text-decoration: underline;
+}
+
+#footer .disclaimer {
+	font-size: 11px;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 10px;
+	line-height: 15px;
+	max-width: 673px;
+}
